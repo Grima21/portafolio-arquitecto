@@ -1,0 +1,184 @@
+.hero {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* text-align: left; */
+  position: relative;
+  z-index: 50;
+  padding: 1.5rem;
+}
+.heroTitle {
+  width: 1024px;
+  height: 192px;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.heroSubtitle {
+  width: 30rem;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.titleYellow {
+  color: #f7c437;
+  font-weight: 700;
+}
+.hrContent {
+  width: 10%;
+  height: 0.5px;
+  background-color: #cccccc8a;
+  margin: 2rem 0;
+}
+
+.status {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.statusContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.statusParrafo {
+  font-size: 1.8rem;
+}
+.statusDescription {
+  font-size: 1.2rem;
+  color: #616161;
+}
+@media (max-width: 1020px) {
+  .heroTitle {
+    font-size: 4.5rem;
+    width: 100%;
+  }
+  .heroSubtitle {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+  .heroContainer {
+    padding: 1rem;
+  }
+  .status {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+    width: 100%;
+    margin-bottom: 0ss;
+  }
+  .hrContent {
+    margin: 0;
+  }
+  .heroSubtitle {
+    margin-top: 1.1rem;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .status {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  .statusContainer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 3.3rem;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .hrContent {
+    width: 10%;
+    margin-top: 0;
+  }
+  .heroSubtitle {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .statusParrafo {
+    font-size: 1.5rem;
+  }
+  .statusDescription {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .heroTitle {
+    font-size: 2.9rem;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .heroSubtitle {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  .statusParrafo {
+    font-size: 1.3rem;
+  }
+  .statusDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .heroSubtitle {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .statusParrafo {
+    font-size: 1.5rem;
+  }
+  .statusDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroTitle {
+    font-size: 2.2rem;
+    width: 100%;
+  }
+  .heroSubtitle {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .statusParrafo {
+    font-size: 1.3rem;
+  }
+  .statusDescription {
+    font-size: 0.9rem;
+  }
+}

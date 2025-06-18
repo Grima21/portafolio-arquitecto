@@ -1,0 +1,100 @@
+.contact {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 4rem 2rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: #fac518;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+.infoGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fac518;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #fac518;
+  color: #fac518;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button span {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fac518;
+  color: #1e1e1e;
+}
+
+.button:hover span {
+  transform: translateX(5px);
+}
+
+.footer {
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media screen and (max-width: 768px) {
+  .infoGrid {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 50%;
+    text-align: center;
+  }
+}

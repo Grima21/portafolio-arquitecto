@@ -1,0 +1,155 @@
+.projects {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #000;
+  color: white;
+}
+
+.container {
+  margin: 8rem auto;
+  max-width: 1200px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 5.5rem;
+  padding: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.line {
+  width: 10%;
+  height: 2px;
+  background-color: #fac518;
+  align-self: flex-end;
+}
+
+.projectsContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 4rem;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.projectContentInfo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.projectInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.number {
+  font-size: 1rem;
+  color: #fac518;
+  font-weight: bold;
+}
+
+.metaLine {
+  width: 30px;
+  height: 2px;
+  background-color: #fac518;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.detailsLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .projectCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectContentInfo {
+    text-align: center;
+  }
+
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .projectImage {
+    width: 100%;
+    max-width: none;
+  }
+}

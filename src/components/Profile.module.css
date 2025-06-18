@@ -1,0 +1,137 @@
+.profile {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  color: #111;
+  line-height: 2;
+}
+
+.container {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1.5;
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: #f0c14b;
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  width: 32rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #5e5e5e;
+}
+
+.column {
+  min-width: 200px;
+  flex: 1;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  /* font-weight: 600; */
+  letter-spacing: 0.05rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #5e5e5e;
+}
+
+.institution {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.degree {
+  font-size: 0.9rem;
+  color: #111111d0;
+  margin-bottom: 0.5rem;
+}
+
+.service {
+  font-size: 0.9rem;
+  color: #111111d0;
+  margin-bottom: 0.5rem;
+}
+
+.certification {
+  font-size: 0.9rem;
+  color: #111111d0;
+  margin-bottom: 0.5rem;
+}
+
+.lineR {
+  width: 90%;
+  height: 2px;
+  background-color: #e1e1e1;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .paragraph {
+    width: 100%;
+  }
+
+  .lineR {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .paragraph {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .degree,
+  .service,
+  .certification {
+    font-size: 0.8rem;
+  }
+}
