@@ -8,7 +8,7 @@ const projects = [
     year: "2024",
     location: "Madrid",
     area: "280 m²",
-    image: "./src/assets/img.jpg",
+    image: "./assets/img.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     year: "2023",
     location: "Barcelona",
     area: "1,200 m²",
-    image: "./src/assets/img.jpg",
+    image: "./assets/img.jpg",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const projects = [
     year: "2023",
     location: "Valencia",
     area: "850 m²",
-    image: "./src/assets/img.jpg",
+    image: "./assets/img.jpg",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const projects = [
     year: "2022",
     location: "Sevilla",
     area: "320 m²",
-    image: "./src/assets/img.jpg",
+    image: "./assets/img.jpg",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ const projects = [
     year: "2022",
     location: "Bilbao",
     area: "2,100 m²",
-    image: "./src/assets/img.jpg",
+    image: "./assets/img.jpg",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const projects = [
     year: "2021",
     location: "Toledo",
     area: "450 m²",
-    image: "./src/assets/img.jpg",
+    image: "./assets/img.jpg",
   },
 ];
 
