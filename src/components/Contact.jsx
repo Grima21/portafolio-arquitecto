@@ -15,7 +15,7 @@ export default function Contact() {
         <div className={styles.infoGrid}>
           <div>
             <h3 className={styles.label}>EMAIL</h3>
-            <p className={styles.value}>ana.martinez@arquitectura.com</p>
+            <p className={styles.value}>peralta.martinez@arquitectura.com</p>
           </div>
           <div>
             <h3 className={styles.label}>TELÉFONO</h3>
