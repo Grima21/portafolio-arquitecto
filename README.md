@@ -32,9 +32,11 @@ Sitio web profesional desarrollado como proyecto de práctica para mostrar un po
 
 ## 🖼️ Capturas
 
-![Proyectos](./src/assets/screenshots/proyectos.png)
-![Perfil](./src/assets/screenshots/perfil.png)
-![Contacto](./src/assets/screenshots/contacto.png)
+![Proyectos](![imagen](https://github.com/user-attachments/assets/b473ce23-140c-4ecf-9cba-1b85e8a09d43)
+)
+![Perfil](![imagen](https://github.com/user-attachments/assets/4e3fcded-c9a2-46c7-99d4-385ca03f8c6f)
+)
+![Contacto]()
 
 ---
 
