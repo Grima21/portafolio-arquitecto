@@ -33,7 +33,7 @@ export default function Contact() {
       </div>
 
       <footer className={styles.footer}>
-        <p>© 2024 ANA MARTÍNEZ ARQUITECTA</p>
+        <p>© 2024 PERALTA MARTINEZ ARQUITECTA</p>
         <p>COLEGIADA Nº 12345 - COAM</p>
       </footer>
     </section>
