@@ -1,4 +1,57 @@
+import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
+
+// Tus funciones de animación existentes
+const stagger = (staggerChildren = 0.08, delayChildren = 0) => ({
+  hidden: {},
+  show: { transition: { staggerChildren, delayChildren } },
+});
+
+const fadeUp = (delay = 0, y = 24) => ({
+  hidden: { opacity: 0, y },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay },
+  },
+});
+
+const growX = (delay = 0) => ({
+  hidden: { scaleX: 0, opacity: 0, originX: 0 },
+  show: {
+    scaleX: 1,
+    opacity: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay },
+  },
+});
+
+// Animaciones adicionales para tu sección
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 60 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 const projects = [
   {
@@ -59,63 +112,132 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className={styles.projects}>
+    <motion.section
+      className={styles.projects}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>PROYECTOS SELECCIONADOS</h2>
-          <div className={styles.line}></div>
-        </div>
+        {/* Header animado */}
+        <motion.div className={styles.header} variants={stagger(0.1, 0.2)}>
+          <motion.h2 className={styles.title} variants={fadeUp(0, 30)}>
+            PROYECTOS SELECCIONADOS
+          </motion.h2>
+          <motion.div
+            className={styles.line}
+            variants={growX(0.3)}
+          ></motion.div>
+        </motion.div>
 
-        <div className={styles.projectsContent}>
+        {/* Contenido de proyectos */}
+        <motion.div
+          className={styles.projectsContent}
+          variants={stagger(0.15, 0.5)}
+        >
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={project.id}
               className={`${styles.projectCard} ${
                 index % 2 !== 0 ? styles.reverse : ""
               }`}
+              variants={fadeUp(0, 40)}
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.3, ease: "easeOut" },
+              }}
             >
-              <div className={styles.projectContentInfo}>
-                <div className={styles.projectInfo}>
-                  <span className={styles.number}>
+              {/* Información del proyecto */}
+              <motion.div
+                className={styles.projectContentInfo}
+                variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+              >
+                <motion.div
+                  className={styles.projectInfo}
+                  variants={stagger(0.05)}
+                >
+                  <motion.span
+                    className={styles.number}
+                    variants={fadeUp(0, 20)}
+                    whileHover={{
+                      scale: 1.1,
+                      color: "#your-accent-color", // Cambia por tu color de acento
+                      transition: { duration: 0.2 },
+                    }}
+                  >
                     {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div className={styles.metaLine}></div>
-                  <span className={styles.category}>
+                  </motion.span>
+                  <motion.div
+                    className={styles.metaLine}
+                    variants={growX(0.1)}
+                  ></motion.div>
+                  <motion.span
+                    className={styles.category}
+                    variants={fadeUp(0.1, 15)}
+                  >
                     {project.category.toUpperCase()}
-                  </span>
-                </div>
+                  </motion.span>
+                </motion.div>
 
-                <div className={styles.projectTitle}>
+                <motion.div
+                  className={styles.projectTitle}
+                  variants={fadeUp(0.2, 25)}
+                >
                   <h3 className={styles.projecttitle}>{project.title}</h3>
-                </div>
+                </motion.div>
 
-                <div className={styles.details}>
-                  <div className={styles.detailsLabel}>
+                <motion.div
+                  className={styles.details}
+                  variants={stagger(0.1, 0.3)}
+                >
+                  <motion.div
+                    className={styles.detailsLabel}
+                    variants={fadeUp(0, 15)}
+                  >
                     <span className={styles.label}>AÑO</span>
                     <span className={styles.value}>{project.year}</span>
-                  </div>
-                  <div className={styles.detailsLabel}>
+                  </motion.div>
+                  <motion.div
+                    className={styles.detailsLabel}
+                    variants={fadeUp(0, 15)}
+                  >
                     <span className={styles.label}>UBICACIÓN</span>
                     <span className={styles.value}>{project.location}</span>
-                  </div>
-                  <div className={styles.detailsLabel}>
+                  </motion.div>
+                  <motion.div
+                    className={styles.detailsLabel}
+                    variants={fadeUp(0, 15)}
+                  >
                     <span className={styles.label}>ÁREA</span>
                     <span className={styles.value}>{project.area}</span>
-                  </div>
-                </div>
-              </div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
 
-              <div className={styles.imageContainer}>
-                <img
+              {/* Contenedor de imagen */}
+              <motion.div
+                className={styles.imageContainer}
+                variants={index % 2 === 0 ? fadeInRight : fadeInLeft}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: "easeOut" },
+                }}
+              >
+                <motion.img
                   src={project.image}
                   alt={project.title}
                   className={styles.projectImage}
+                  variants={scaleIn}
+                  whileHover={{
+                    filter: "brightness(1.1)",
+                    transition: { duration: 0.3 },
+                  }}
                 />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

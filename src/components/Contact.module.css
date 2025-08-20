@@ -6,6 +6,7 @@
 
 .container {
   max-width: 1200px;
+  height: 400px;
   margin: 0 auto;
 }
 
@@ -13,6 +14,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
 .line {
@@ -20,6 +22,9 @@
   height: 2px;
   background-color: #fac518;
   margin-bottom: 2rem;
+}
+.link {
+  color: #f0f0f0;
 }
 
 .description {
@@ -62,6 +67,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 6px;
 }
 
 .button span {
@@ -87,6 +93,18 @@
   font-size: 0.8rem;
   color: #999;
 }
+
+/* Suaviza animaciones */
+.title,
+.line,
+.description,
+.infoGrid,
+.button,
+.footer {
+  will-change: transform, opacity;
+}
+
+/* Accesibilidad de enlaces */
 
 @media screen and (max-width: 768px) {
   .infoGrid {

@@ -1,12 +1,13 @@
 .hero {
   width: 100%;
+  height: 680px;
   background-color: #ffffff;
   padding: 20px;
   display: flex;
   flex-direction: column;
 
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .heroContainer {
@@ -182,3 +183,13 @@
     font-size: 0.9rem;
   }
 }
+
+/* .heroTitle,
+.hrContent,
+.heroSubtitle,
+.status {
+  will-change: transform, opacity;
+}
+.hrContent {
+  transform-origin: left;
+} */
