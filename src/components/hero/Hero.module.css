@@ -1,7 +1,8 @@
 .hero {
   width: 100%;
   height: 680px;
-  background-color: #ffffff;
+  background-size: cover;
+  /* background-color: #ffffff; */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   /* text-align: left; */
   position: relative;
@@ -27,19 +28,60 @@
   height: 192px;
   font-size: 6rem;
   font-weight: 700;
-  color: #333;
+  color: #ffff;
   margin-bottom: 1rem;
+  /* shadow: 22px 22px 13px rgba(255, 0, 0, 1); */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.49);
+  tracking: -0.5px;
+  line-height: 1;
+}
+
+.btn {
+  width: 180px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #f7c437;
+  border: none;
+  font-size: 1rem;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #e6b130;
+}
+
+.btnSecundary {
+  width: 180px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid #f7c437;
+  font-size: 1rem;
+  color: #f7c437;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transform: all 0.3s ease;
+}
+.btnSecundary:hover {
+  background-color: #f7c437;
+  color: #000;
+  transform: scale(1.05);
 }
 .heroSubtitle {
   width: 30rem;
   line-height: 1.5;
   font-size: 1.3rem;
-  color: #666;
+  color: #ffff;
   margin-bottom: 2rem;
 }
 .titleYellow {
   color: #f7c437;
-  font-weight: 700;
+  font-weight: 800;
 }
 .hrContent {
   width: 10%;
@@ -64,10 +106,11 @@
 }
 .statusParrafo {
   font-size: 1.8rem;
+  color: #ffff;
 }
 .statusDescription {
   font-size: 1.2rem;
-  color: #616161;
+  color: #f7c437;
 }
 @media (max-width: 1020px) {
   .heroTitle {

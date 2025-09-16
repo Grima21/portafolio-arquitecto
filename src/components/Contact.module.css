@@ -69,6 +69,33 @@
   transition: all 0.3s ease;
   border-radius: 6px;
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.iconBtn {
+  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btnIcon {
+  width: 40px;
+  height: 20px;
+  fill: #fac518;
+  transition: fill 0.3s ease;
+}
 
 .button span {
   margin-left: 0.5rem;

@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import { motion, useReducedMotion } from "framer-motion";
-import { fadeUp, stagger, growX } from "../lib/motion";
-import CountUp from "../components/CountUp";
+import { fadeUp, stagger, growX } from "../../lib/motion";
+import CountUp from "../CountUp";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -33,12 +33,17 @@ export default function Hero() {
           />
 
           <motion.p className={styles.heroSubtitle} variants={fadeUp(0.15)}>
-            Especializada en diseños arquitectonico contemporaneo y sostenible.
-            Creando espacios funcionales que integran innovacion estetica.
+            “Diseños arquitectónicos sostenibles que transforman ideas en
+            espacios habitables y funcionales.
           </motion.p>
         </div>
+        {/* CTA */}
+        <motion.div variants={fadeUp(0.2)}>
+          <button className={styles.btn}>Ver proyectos</button>
+          <button className={styles.btnSecundary}>Agendar consulta</button>
+        </motion.div>
         {/* Status con count-up + reveal */}
-        <motion.div className={styles.status} variants={fadeUp(0.2)}>
+        <motion.div className={styles.status} variants={fadeUp(0.27)}>
           <div className={styles.statusContainer}>
             <p className={styles.statusParrafo}>
               <CountUp to={50} />

@@ -1,6 +1,5 @@
 import "./App.css";
-import Hero from "./components/Hero";
-import NavBar from "./components/NavBar";
+import PrincipalHero from "./components/hero/PrincipalHero";
 import Projects from "./components/Projects";
 import Profiles from "./components/Profile";
 import Contact from "./components/Contact";
@@ -8,8 +7,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <main>
-      <NavBar />
-      <Hero />
+      <PrincipalHero />
       <Projects />
       <Profiles />
       <Contact />

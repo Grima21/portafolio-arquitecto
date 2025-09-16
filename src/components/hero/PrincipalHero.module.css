@@ -1,0 +1,25 @@
+/* src/components/principal/PrincipalHero.module.css */
+.wrapper {
+  position: relative;
+  width: 100%;
+  /* Altura mínima para cubrir Nav + Hero; ajusta según tu hero */
+  min-height: 100vh;
+  background-image: url("/assets/background-image.jpeg"); /* desde /public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Si quieres oscurecer/teñir la imagen */
+.overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.2)
+  );
+  pointer-events: none; /* no bloquea clics */
+}
