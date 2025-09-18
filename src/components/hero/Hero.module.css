@@ -212,9 +212,15 @@
   .statusDescription {
     font-size: 1rem;
   }
+  .btn,
+  .btnSecundary {
+    width: 100%;
+    font-size: 0.95rem;
+    height: 45px;
+  }
 }
 
-@media (max-width: 365px) {
+@media (max-width: 395px) {
   .heroTitle {
     font-size: 1.2rem;
     width: 100%;
@@ -228,6 +234,12 @@
   }
   .statusDescription {
     font-size: 0.9rem;
+  }
+  .btn,
+  .btnSecundary {
+    width: 100%;
+    font-size: 0.9rem;
+    height: 45px;
   }
 }
 
