@@ -10,8 +10,11 @@
 
 .container {
   max-width: 1120px;
+  height: 400px;
   margin: 0 auto;
   padding: 0 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .kicker {
