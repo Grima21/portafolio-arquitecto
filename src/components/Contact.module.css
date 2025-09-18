@@ -1,124 +1,235 @@
 .contact {
-  background-color: #1e1e1e;
+  position: relative;
+  background: #111;
   color: #f0f0f0;
   padding: 4rem 2rem 2rem;
+  overflow: hidden;
+}
+.glow {
+  position: absolute;
+  inset: auto -10% -30% -10%;
+  height: 380px;
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(250, 197, 24, 0.15),
+    rgba(250, 197, 24, 0) 70%
+  );
+  pointer-events: none;
+  filter: blur(40px);
 }
 
 .container {
   max-width: 1200px;
-  height: 400px;
   margin: 0 auto;
 }
 
 .title {
   font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 0.5rem;
+  letter-spacing: 0.02em;
 }
-
 .line {
-  width: 50px;
-  height: 2px;
-  background-color: #fac518;
-  margin-bottom: 2rem;
-}
-.link {
-  color: #f0f0f0;
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #fac518, #ffe27a);
+  border-radius: 2px;
+  margin-bottom: 1.75rem;
 }
 
 .description {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin-bottom: 3rem;
-  line-height: 1.6;
-  color: #d0d0d0;
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin-bottom: 2.2rem;
+  line-height: 1.65;
+  color: #d5d5d5;
+}
+.description strong {
+  color: #fff;
+}
+.description u {
+  text-underline-offset: 3px;
 }
 
 .infoGrid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
-
+.card {
+  background: #171717;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 1.25rem 1.1rem;
+}
 .label {
-  font-size: 0.75rem;
-  font-weight: bold;
+  font-size: 0.72rem;
+  font-weight: 800;
   color: #fac518;
-  letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.12rem;
+  margin-bottom: 0.35rem;
   text-transform: uppercase;
 }
-
 .value {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: #f0f0f0;
 }
+.hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #9a9a9a;
+}
 
+.link {
+  color: #f0f0f0;
+  background-image: linear-gradient(#fac518, #fac518);
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.3s ease;
+}
+.link:hover {
+  color: #fff;
+  background-size: 100% 2px;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
 .button {
-  background-color: transparent;
+  position: relative;
+  isolation: isolate;
+  background: transparent;
   border: 1px solid #fac518;
   color: #fac518;
-  padding: 0.75rem 2rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 6px;
+  transition: all 0.28s ease;
 }
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  color: #999;
+.button::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 12px;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #fac51833,
+    transparent 30%,
+    transparent 70%,
+    #fac51833
+  );
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
+.button:hover {
+  background: #fac518;
+  color: #111;
+  transform: translateY(-2px);
+}
+.button:hover::after {
+  opacity: 1;
+}
+.button span {
+  margin-left: 0.45rem;
+  transition: transform 0.25s ease;
+}
+.button:hover span {
+  transform: translateX(4px);
+}
+
+.secondaryBtn {
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  color: #e8e8e8;
+  padding: 0.85rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+.secondaryBtn:hover {
+  border-color: #fac518;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .social {
   display: flex;
-  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+.iconLink {
+  display: inline-flex;
   align-items: center;
-  gap: 4rem;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  background: #151515;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
-.iconBtn {
-  margin-left: 1rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.btnIcon {
-  width: 40px;
+.icon {
+  width: 20px;
   height: 20px;
   fill: #fac518;
-  transition: fill 0.3s ease;
+  transition: fill 0.25s ease;
 }
-
-.button span {
-  margin-left: 0.5rem;
-  transition: transform 0.3s ease;
+.iconLink:hover {
+  transform: translateY(-2px);
+  border-color: #fac518;
+  box-shadow: 0 0 0 4px rgba(250, 197, 24, 0.08);
 }
-
-.button:hover {
-  background-color: #fac518;
-  color: #1e1e1e;
-}
-
-.button:hover span {
-  transform: translateX(5px);
+.iconLink:hover .icon {
+  fill: #ffe27a;
 }
 
 .footer {
-  border-top: 1px solid #333;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
+  border-top: 1px solid #262626;
+  margin-top: 2rem;
+  padding-top: 1.1rem;
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
-  color: #999;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .button,
+  .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
 }
 
 /* Suaviza animaciones */
@@ -126,20 +237,8 @@
 .line,
 .description,
 .infoGrid,
-.button,
+.ctaGroup,
+.social,
 .footer {
   will-change: transform, opacity;
-}
-
-/* Accesibilidad de enlaces */
-
-@media screen and (max-width: 768px) {
-  .infoGrid {
-    flex-direction: column;
-  }
-
-  .button {
-    width: 50%;
-    text-align: center;
-  }
 }

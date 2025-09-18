@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./Projects.module.css";
+import { MoveRight } from "lucide-react";
 
 // Tus funciones de animación existentes
 const stagger = (staggerChildren = 0.08, delayChildren = 0) => ({
@@ -57,6 +58,8 @@ const projects = [
   {
     id: 1,
     title: "Casa Moderna Minimalista",
+    description:
+      "Reordenamos el programa para maximizar la luz natural y la ventilación cruzada Cocina-estar integrados y circulación clara para uso diario eficiente.",
     category: "Residencial",
     year: "2024",
     location: "Madrid",
@@ -66,6 +69,8 @@ const projects = [
   {
     id: 2,
     title: "Complejo Comercial Urban Plaza",
+    description:
+      "Reordenamos el programa para maximizar la luz natural y la ventilación cruzada Cocina-estar integrados y circulación clara para uso diario eficiente.",
     category: "Comercial",
     year: "2023",
     location: "Barcelona",
@@ -75,6 +80,8 @@ const projects = [
   {
     id: 3,
     title: "Edificio de Oficinas EcoTech",
+    description:
+      "Reordenamos el programa para maximizar la luz natural y la ventilación cruzada Cocina-estar integrados y circulación clara para uso diario eficiente.",
     category: "Corporativo",
     year: "2023",
     location: "Valencia",
@@ -84,6 +91,8 @@ const projects = [
   {
     id: 4,
     title: "Vivienda Unifamiliar Sostenible",
+    description:
+      "Reordenamos el programa para maximizar la luz natural y la ventilación cruzada Cocina-estar integrados y circulación clara para uso diario eficiente.",
     category: "Residencial",
     year: "2022",
     location: "Sevilla",
@@ -93,6 +102,8 @@ const projects = [
   {
     id: 5,
     title: "Centro Cultural Contemporáneo",
+    description:
+      "Reordenamos el programa para maximizar la luz natural y la ventilación cruzada Cocina-estar integrados y circulación clara para uso diario eficiente.",
     category: "Cultural",
     year: "2022",
     location: "Bilbao",
@@ -102,6 +113,8 @@ const projects = [
   {
     id: 6,
     title: "Rehabilitación Edificio Histórico",
+    description:
+      "Reordenamos el programa para maximizar la luz natural y la ventilación cruzada Cocina-estar integrados y circulación clara para uso diario eficiente.",
     category: "Rehabilitación",
     year: "2021",
     location: "Toledo",
@@ -184,6 +197,12 @@ export default function Projects() {
                   variants={fadeUp(0.2, 25)}
                 >
                   <h3 className={styles.projecttitle}>{project.title}</h3>
+                  <p className={styles.projectdescription}>
+                    {project.description}
+                  </p>
+                  <button className={styles.btnproject}>
+                    Ver proyecto <MoveRight className={styles.arrow} />
+                  </button>
                 </motion.div>
 
                 <motion.div

@@ -119,7 +119,7 @@
   }
   .heroSubtitle {
     width: 90%;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .heroContainer {
     padding: 1rem;
@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 100%;
     margin-bottom: 0ss;
   }
@@ -149,6 +149,10 @@
   }
   .statusContainer {
     text-align: center;
+  }
+  .btn,
+  .btnSecundary {
+    width: 100%;
   }
 }
 
@@ -210,9 +214,9 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 365px) {
   .heroTitle {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     width: 100%;
   }
   .heroSubtitle {

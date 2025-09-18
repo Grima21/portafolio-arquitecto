@@ -66,6 +66,11 @@
   text-decoration: none;
   color: #ffff;
   font-size: 0.9rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+.navLink:hover {
+  color: #f7c437;
 }
 
 @media screen and (max-width: 1024px) {
