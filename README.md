@@ -6,16 +6,17 @@ Sitio web profesional desarrollado como proyecto de práctica para mostrar un po
 
 ## ✨ Demo
 
-[🔗 Ver sitio en vivo](https://portafolio-arquitecto-drab.vercel.app/) <!-- Reemplaza con tu link cuando lo subas -->
+[🔗 Ver sitio en vivo](https://portafolio-arquitecto-drab.vercel.app/) 
 
 ---
 
 ## 🧩 Características
-
 - ✅ Sección de proyectos con layout intercalado (texto/imagen)
 - ✅ Perfil profesional con formación, certificaciones y servicios
-- ✅ Sección de contacto visualmente atractiva
+- ✅ Testimonios con diseño responsivo
+- ✅ Sección de contacto clara y atractiva
 - ✅ Diseño responsive y adaptable
+- ✅ Animaciones suaves en scroll, hover y transición
 - ✅ Tipografía profesional (`Inter`) y estilo editorial
 
 ---
@@ -32,11 +33,8 @@ Sitio web profesional desarrollado como proyecto de práctica para mostrar un po
 
 ## 🖼️ Capturas
 
-![Proyectos](![imagen](https://github.com/user-attachments/assets/b473ce23-140c-4ecf-9cba-1b85e8a09d43)
-)
-![Perfil](![imagen](https://github.com/user-attachments/assets/4e3fcded-c9a2-46c7-99d4-385ca03f8c6f)
-)
-![Contacto]()
+(<img width="1905" height="1006" alt="image" src="https://github.com/user-attachments/assets/fa44a548-39cf-4661-8013-24b80f4b9baf" />
+<img width="1904" height="1078" alt="image" src="https://github.com/user-attachments/assets/ca171536-f32b-466a-a3fe-d7b1a37675f4" />
 
 ---
 
@@ -53,6 +51,8 @@ Sitio web profesional desarrollado como proyecto de práctica para mostrar un po
 
 Desarrollado por **Grimaldo Sánchez**  
 Proyecto Front-End de práctica personal
+💼 ¿Buscas un desarrollador front-end?  
+👉 Conéctame en [LinkedIn](www.linkedin.com/in/grimaldo-sanchez)
 
 ---
 
@@ -64,3 +64,4 @@ cd portfolio-arquitectura
 npm install
 npm run dev
 ```
+
